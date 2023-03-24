@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Noto+Sans:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* font-family: 'Open Sans', sans-serif; */
+}
+
+body{
+    height: 100vh;
+    background-color: #000;
+    background-image: url('./images/ibrahim-rifath-NJ7CaVfWYaw-unsplash.jpg');
+    background-size: cover;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color:beige;
+    font-size:1.3rem;
+    font-weight: bold;
+    /* text-shadow: 2px 2px rgba(000,000,000,0.7); */
+    
+}
+
+a:hover{
+    color:rgb(250, 203, 171);
+}
+
+
+header{
+    position: relative;
+    padding: 0;
+}
+
+.navbar{
+    width: 100%;
+    height: 60px;
+    margin: 0 auto;
+    max-width: auto;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background: rgba(225,225,225,0.4);
+    backdrop-filter: blur(5px); */
+}
+
+.navbar .logo a{
+    font-family: 'Noto Sans', sans-serif;
+    font-size:2rem;
+    font-weight: bold;
+    padding: 0 2rem;
+    color:rgb(4, 155, 201);
+}
+
+.navbar .logo a:hover{
+    color: rgb(71, 183, 208);
+}
+
+.navbar .links{
+    display: flex;
+    gap:2rem;
+    padding:0 2rem;
+}
+
+.navbar .toggle_btn{
+    color:beige;
+    padding:0 2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+/* dropdown */
+
+.dropdown{
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 300px;
+    background:rgba(225,225,225,0.4);
+    backdrop-filter: blur(4px);
+    border-radius: 10px;
+    overflow:hidden;
+    display: none;
+}
+
+/* .toggle_btn:hover + .dropdown{
+    display: block;
+} */
+
+.dropdown a{
+    text-decoration: none;
+    color:beige;
+    font-size:1.3rem;
+    font-weight: bold;
+    /* text-shadow: 2px 2px rgba(000,000,000,0.3); */
+}
+
+.dropdown a:hover{
+    color:rgb(250, 203, 171);
+    -webkit-animation: none;
+    -moz-animation:none;
+    animation: none;
+    text-shadow: none;
+}
+.dropdown li{
+    display: flex;
+    padding: 0.7rem;
+    align-items: center;
+    justify-content: center;
+}
+/* responsive */
+
+@media(max-width:992px){
+    .navbar .links{
+        display: none;
+    }
+    .navbar .toggle_btn{
+        display: block;
+    }
+    
+}
+
+/* main content */
+
+.container{
+    display: flex;
+    width: auto;
+    height: 90vh;
+    
+}
+.left-part{
+    flex:1;
+    display: flex;
+    align-items: flex-end;
+    justify-content:center;
+    flex-direction: column;
+}
+
+.main-text h1{
+    margin-top: 15rem;
+    margin-left: 30rem;
+    font-size: 4vh;
+    font-family: 'Abel', sans-serif;
+    color:rgb(4, 155, 201);
+}
+
+.main-text p{
+    margin-top: 0.5rem;
+    margin-left: 30rem;
+    color:rgb(255, 232, 215);
+    font-size: 15px;
+}
+
+.read-btn{
+    margin-top: 01.1rem;
+    margin-right: 5rem;
+    border: 3px solid rgb(71, 183, 208);
+    border-radius: 10px;
+   
+}
+.read-btn button{
+    background: none;
+    border:none;
+    padding: 10px;
+    font-size: 2vh;
+    font-weight: bold;
+    color:rgb(4, 155, 201);
+    transition: 0.8s;
+    position:relative;
+    overflow: hidden;
+}
+
+.read-btn button:hover{
+    color:rgb(255, 232, 215);
+}
+
+.read-btn button::before{
+    content:"";
+    position: absolute;
+    left:0;
+    width:100%;
+    height:0%;
+    background:rgb(71, 183, 208);
+    z-index: -1;
+    transition: 0.8s;
+    bottom:0;
+    border-radius:50% 50% 0 0 ;
+}
+
+.read-btn button:hover::before{
+    height: 180%;
+}
+
+
+ 
+.right-part{
+    flex:1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 4rem;
+}
+
+.text{
+    font-family: 'Kanit', sans-serif;
+    text-align: end;
+    flex-direction: column;
+    margin: 2rem;
+    font-size: 5vh;
+    color:transparent;
+    background-image: url('./images/ibrahim-rifath-NJ7CaVfWYaw-unsplash12.jpg');
+    background-size:cover;
+    background-clip:text;
+    -webkit-background-clip: text;
+}
+
+.social-handle{
+    text-decoration: none;
+    list-style: none;
+    color:rgb(250, 203, 171);
+
+}
+
+.social-handle svg{
+    margin: 0.5rem 3rem 0.5rem 0;
+    /* border: 1px rgb(250, 203, 171) solid;
+    border-radius: 100%; */
+    
+}
+
+.social-handle svg:hover{
+   transform: scale(1.2);
+}

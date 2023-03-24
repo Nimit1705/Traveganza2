@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traveganza</title>
+    <link rel="stylesheet" href="../map/mapstyles.css">
+    <link rel='stylesheet' type='text/css' href='https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.5.0/maps/maps.css'>
+    <script src="../map/mapscript.js"></script>
+    <script onload="mapContent();" src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.5.0/maps/maps-web.min.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="../index.html">Traveganza</a></div>
+            <ul class="links">
+                <li><a href="#">Blogs</a></li>
+                <li><a href="#">Maps</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">About Me</a></li>
+            </ul>
+            <div class="toggle_btn"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M4 6l16 0"></path>
+                <path d="M4 12l16 0"></path>
+                <path d="M4 18l16 0"></path>
+             </svg></div>
+        </div>
+        <div class="dropdown"><ul class="links">
+            <li><a href="#">Blogs</a></li>
+            <li><a href="#">Maps</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">About Me</a></li></ul>
+        </div>
+    </header>
+    <div class="map-part">
+        <div id='map'></div>
+        <script>
+            function mapContent(){
+                var api_key = 'AMoCN0Mtfoz1xDuEfyAnuHAPfbq8dmYF';
+                var latAndLong = {lat: 23.25232, lng: 77.43109}; 
+                var zoomLevel = 4;
+                var yourAddress = 'Bhopal, MP';
+
+                const map = tt.map({
+                    container: 'map',
+                    key: api_key,
+                    center: latAndLong,
+                    zoom: zoomLevel
+                });
+
+                
+	 	
+                // FOR CUSTOM MARKER
+                //var customMarker = document.createElement('div');
+                //customMarker.id = 'marker';
+                //var marker = new tt.Marker({element: customMarker}).setLngLat(latAndLong).addTo(map);
+
+                var popupOffsets = {
+                top: [0, 0],
+                bottom: [0, -30],
+                'bottom-right': [0, -70],
+                'bottom-left': [0, -70],
+                left: [25, -35],
+                right: [-25, -35]
+                }
+
+                var popup = new tt.Popup({
+                    closeButton:false,
+                    offset: popupOffsets}).setHTML(yourAddress);
+                var marker = new tt.Marker().setLngLat(latAndLong).setPopup(popup).addTo(map);
+            
+
+
+                var DlLangLat = {lat: 28.63243, lng: 77.21879}
+                var popup2 = new tt.Popup({
+                    closeButton:false,
+                    offset: popupOffsets
+                }).setText('New Delhi')
+                var marker2 = new tt.Marker().setLngLat(DlLangLat).setPopup(popup2).addTo(map);
+
+               
+                
+                
+
+            }
+
+        </script>
+    </div>
+
+    
+</body>
+</html>
