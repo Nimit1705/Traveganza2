@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Noto+Sans:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* font-family: 'Open Sans', sans-serif; */
+}
+
+::-webkit-scrollbar{
+    width: 1.5vw;
+}
+
+::-webkit-scrollbar-track{
+    background-color: aqua;
+    background: rgba(140, 243, 243, 0.4) ;
+    border-radius: 4px;
+    margin-block: .5em;
+}
+
+::-webkit-scrollbar-thumb{
+    background: rgba(245, 245, 220, 1);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: rgba(137, 238, 233, 0.5);
+
+}
+
+body{
+    height: 100vh;
+    background: rgb(250,203,171);
+    background: linear-gradient(90deg, rgba(250,203,171,1) 10%, rgba(71,183,208,1) 62%);
+    background-size: cover;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color:beige;
+    font-size:1.3rem;
+    font-weight: bold;
+    /* text-shadow: 2px 2px rgba(000,000,000,0.7); */
+    
+}
+
+a:hover{
+    color:rgb(250, 203, 171);
+}
+
+
+header{
+    position: relative;
+    padding: 0;
+}
+
+.navbar{
+    width: 100%;
+    height: 60px;
+    margin: 0 auto;
+    max-width: auto;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background: rgba(225,225,225,0.4);
+    backdrop-filter: blur(5px); */
+}
+
+.navbar .logo a{
+    font-family: 'Noto Sans', sans-serif;
+    font-size:2rem;
+    font-weight: bold;
+    padding: 0 2rem;
+    color:rgb(4, 155, 201);
+}
+
+.navbar .logo a:hover{
+    color: rgb(71, 183, 208);
+}
+
+.navbar .links{
+    display: flex;
+    gap:2rem;
+    padding:0 2rem;
+}
+
+.navbar .toggle_btn{
+    color:beige;
+    padding:0 2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* dropdown */
+
+.dropdown{
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 300px;
+    background:rgba(225,225,225,0.4);
+    backdrop-filter: blur(4px);
+    border-radius: 10px;
+    overflow:hidden;
+    display: none;
+}
+
+/* .toggle_btn:hover + .dropdown{
+    display: block;
+} */
+
+.dropdown a{
+    text-decoration: none;
+    color:beige;
+    font-size:1.3rem;
+    font-weight: bold;
+    /* text-shadow: 2px 2px rgba(000,000,000,0.3); */
+}
+
+.dropdown a:hover{
+    color:rgb(250, 203, 171);
+    -webkit-animation: none;
+    -moz-animation:none;
+    animation: none;
+    text-shadow: none;
+}
+.dropdown li{
+    display: flex;
+    padding: 0.7rem;
+    align-items: center;
+    justify-content: center;
+}
+/* responsive */
+
+
+
+
+
+
+/* maps */
+
+.map-part{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#map {
+    height: 90vh;
+    width: 205vh;
+    border-radius: 20px;
+
+}
+
+@media only screen and (max-width: 767px) {
+    #map {
+        height: 300px;
+    }
+}
+
+#marker {
+  background-image: url('/wp-content/uploads/2021/04/copywriter-logo-dark.svg');
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+}
+
+
+@media(max-width:992px){
+    .navbar .links{
+        display: none;
+    }
+    .navbar .toggle_btn{
+        display: block;
+    }
+
+    #map{
+        height: 85vh;
+        width: var(max-width);
+        margin : 0 1rem;
+        
+    }
+    
+}

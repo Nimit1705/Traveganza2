@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="app.js"></script>
     <title>Traveganza</title>
 </head>
 <body>
@@ -12,7 +13,7 @@
         <div class="navbar">
             <div class="logo"><a href="#">Traveganza</a></div>
             <ul class="links">
-                <li><a href="#">Blogs</a></li>
+                <li><a href="pages/blogs.html">Blogs</a></li>
                 <li><a href="pages/map.html">Maps</a></li>
                 <li><a href="#">Gallery</a></li>
                 <li><a href="#">About Me</a></li>
@@ -25,12 +26,21 @@
              </svg></div>
         </div>
         <div class="dropdown"><ul class="links">
-            <li><a href="#">Blogs</a></li>
+            <li><a href="pages/blogs.html">Blogs</a></li>
             <li><a href="pages/map.html">Maps</a></li>
             <li><a href="#">Gallery</a></li>
             <li><a href="#">About Me</a></li></ul>
         </div>
     </header>
+
+    <div id="popUpOverlay"></div>
+    <div id="popUpBox">
+      <h1>Welcome to Traveganza!</h1>
+      <p>This Site is still under development process, some things might not work as intended, we are really sorry for any inconvenience</p>
+      <button id="closeModal">Close</button>
+    </div>
+
+
     <div class="container">
         <div class="left-part">
             <div class="main-text">

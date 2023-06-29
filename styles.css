@@ -20,6 +20,83 @@ body{
     font-family: 'Open Sans', sans-serif;
 }
 
+#popUpOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+  
+#popUpBox {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 200px;
+    width: 400px; /* Fixed width */
+    background: linear-gradient(90deg, rgba(250,203,171,1) 10%, rgba(71,183,208,1) 90%);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 10000;
+    display: none;
+    font-family: 'Noto Sans', sans-serif;
+}
+  
+#popUpBox h1 {
+    margin-top: 0;
+    font-size: 24px; /* Relative font size */
+    color: rgb(4, 138, 179);
+    
+}
+  
+#popUpBox p {
+    margin-top:9px;
+    font-size: 16px; /* Relative font size */
+    font-weight: bold;
+    color:rgb(255, 255, 255);
+}
+  
+#popUpBox button {
+    margin-top: 25px;
+    font-size: 16px; /* Relative font size */
+    background-color: rgb(54, 208, 208);
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#popUpBox button:hover {
+    background-color: rgba(1, 150, 150, 0.934);
+}
+  
+
+::-webkit-scrollbar{
+    width: 1.5vw;
+}
+
+::-webkit-scrollbar-track{
+    background-color: aqua;
+    background: rgba(140, 243, 243, 0.4) ;
+    border-radius: 4px;
+    margin-block: .5em;
+}
+
+::-webkit-scrollbar-thumb{
+    background: rgba(245, 245, 220, 1);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: rgba(137, 238, 233, 0.5);
+
+}
 
 
 li{
